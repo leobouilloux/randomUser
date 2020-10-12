@@ -68,6 +68,10 @@
 		B3119EBB252D4A0600C80B8E /* MainCoordinatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3119EBA252D4A0600C80B8E /* MainCoordinatorFactory.swift */; };
 		B3119EC0252D4A4100C80B8E /* MainFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3119EBF252D4A4100C80B8E /* MainFactory.swift */; };
 		B3119EC5252D4AC200C80B8E /* UsersListOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3119EC4252D4AC200C80B8E /* UsersListOutput.swift */; };
+		B3119ECB252DB7B000C80B8E /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3119ECA252DB7B000C80B8E /* UserTableViewCell.swift */; };
+		B3119ED3252DB7B800C80B8E /* UserTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3119ED2252DB7B800C80B8E /* UserTableViewCellViewModel.swift */; };
+		B3119ED8252DB7C500C80B8E /* UserTableViewCellViewModelInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3119ED7252DB7C500C80B8E /* UserTableViewCellViewModelInterface.swift */; };
+		B3119EDD2534866700C80B8E /* UsersListCellType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3119EDC2534866700C80B8E /* UsersListCellType.swift */; };
 		DD4233F99CB49C72D7E09D97 /* Pods_RandomUser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B19CF673B735DAD6B6C412E9 /* Pods_RandomUser.framework */; };
 /* End PBXBuildFile section */
 
@@ -161,6 +165,10 @@
 		B3119EBA252D4A0600C80B8E /* MainCoordinatorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinatorFactory.swift; sourceTree = "<group>"; };
 		B3119EBF252D4A4100C80B8E /* MainFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainFactory.swift; sourceTree = "<group>"; };
 		B3119EC4252D4AC200C80B8E /* UsersListOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersListOutput.swift; sourceTree = "<group>"; };
+		B3119ECA252DB7B000C80B8E /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
+		B3119ED2252DB7B800C80B8E /* UserTableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCellViewModel.swift; sourceTree = "<group>"; };
+		B3119ED7252DB7C500C80B8E /* UserTableViewCellViewModelInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCellViewModelInterface.swift; sourceTree = "<group>"; };
+		B3119EDC2534866700C80B8E /* UsersListCellType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersListCellType.swift; sourceTree = "<group>"; };
 		B4A9F260EBF97F25EA14979D /* Pods-RandomUserTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RandomUserTests.debug.xcconfig"; path = "Target Support Files/Pods-RandomUserTests/Pods-RandomUserTests.debug.xcconfig"; sourceTree = "<group>"; };
 		DD6104E4624A7475B3F30459 /* Pods_RandomUserTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RandomUserTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -435,6 +443,7 @@
 		B3119E7C252D439800C80B8E /* UsersList */ = {
 			isa = PBXGroup;
 			children = (
+				B3119EC9252DB4BD00C80B8E /* Cells */,
 				B3119E97252D468700C80B8E /* UsersListViewModelInterface.swift */,
 				B3119E9C252D46AE00C80B8E /* UsersListViewModel.swift */,
 				B3119EA1252D46EF00C80B8E /* UsersListViewController.swift */,
@@ -451,6 +460,17 @@
 				B3119EB0252D481900C80B8E /* UserDetailsViewModel.swift */,
 			);
 			path = UserDetails;
+			sourceTree = "<group>";
+		};
+		B3119EC9252DB4BD00C80B8E /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				B3119ECA252DB7B000C80B8E /* UserTableViewCell.swift */,
+				B3119ED2252DB7B800C80B8E /* UserTableViewCellViewModel.swift */,
+				B3119ED7252DB7C500C80B8E /* UserTableViewCellViewModelInterface.swift */,
+				B3119EDC2534866700C80B8E /* UsersListCellType.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		C3C2F9637D3008D8E3828806 /* Frameworks */ = {
@@ -689,6 +709,7 @@
 				B3119EB1252D481900C80B8E /* UserDetailsViewModel.swift in Sources */,
 				B3119DD6252D3E6E00C80B8E /* SplashScreenViewController.swift in Sources */,
 				B3119DDD252D3E6E00C80B8E /* SplashScreenFactory.swift in Sources */,
+				B3119ED3252DB7B800C80B8E /* UserTableViewCellViewModel.swift in Sources */,
 				B3119DDA252D3E6E00C80B8E /* SplashScreenCoordinatorOutput.swift in Sources */,
 				B3119DDF252D3E6E00C80B8E /* SplashScreenOutput.swift in Sources */,
 				B3119E23252D3EC400C80B8E /* Array+Extension.swift in Sources */,
@@ -703,6 +724,7 @@
 				B3119DD5252D3E6E00C80B8E /* SplashScreenViewModelInterface.swift in Sources */,
 				B3119E1A252D3EC400C80B8E /* PresentationType.swift in Sources */,
 				B3119E14252D3EC400C80B8E /* Assets.swift in Sources */,
+				B3119EDD2534866700C80B8E /* UsersListCellType.swift in Sources */,
 				B3119E22252D3EC400C80B8E /* UITableView+Extension.swift in Sources */,
 				B3119E1C252D3EC400C80B8E /* CoordinatorFactory.swift in Sources */,
 				B3119E32252D3EC400C80B8E /* RxViewController.swift in Sources */,
@@ -721,11 +743,13 @@
 				B3119E2F252D3EC400C80B8E /* SnackBarType.swift in Sources */,
 				B3119E36252D3EC400C80B8E /* NetworkProvider.swift in Sources */,
 				B3119DD8252D3E6E00C80B8E /* SplashScreenCoordinator.swift in Sources */,
+				B3119ECB252DB7B000C80B8E /* UserTableViewCell.swift in Sources */,
 				B3119EC0252D4A4100C80B8E /* MainFactory.swift in Sources */,
 				B3119E1D252D3EC400C80B8E /* Coordinator.swift in Sources */,
 				B3119E2B252D3EC400C80B8E /* NavigationController.swift in Sources */,
 				B3119E2D252D3EC400C80B8E /* SnackBarController.swift in Sources */,
 				B3119E2C252D3EC400C80B8E /* LoaderController.swift in Sources */,
+				B3119ED8252DB7C500C80B8E /* UserTableViewCellViewModelInterface.swift in Sources */,
 				B3119E1E252D3EC400C80B8E /* UIColor+Extension.swift in Sources */,
 				B3119E17252D3EC400C80B8E /* RouterImp.swift in Sources */,
 				B3119EAC252D47FF00C80B8E /* UserDetailsViewModelInterface.swift in Sources */,

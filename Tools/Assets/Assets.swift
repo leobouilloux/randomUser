@@ -21,4 +21,8 @@ enum Assets {
         static var chevronLeft = UIImage(systemName: "chevron.backward") ?? UIImage()
         static var close = UIImage(systemName: "xmark") ?? UIImage()
     }
+    
+    enum Image {
+        static var defaultAvatar = UIImage(systemName: "person.fill") ?? UIImage()
+    }
 }
