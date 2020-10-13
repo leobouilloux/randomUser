@@ -7,7 +7,6 @@ def pods
     pod 'Alamofire'
     pod 'RealmSwift'
     pod 'RxCocoa'
-    pod 'RxRealm'
     pod 'RxSwift'
 end
 

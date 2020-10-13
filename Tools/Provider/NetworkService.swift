@@ -18,9 +18,7 @@ private enum Endpoint {
     case randomUsers(results: Int = 10)
 }
 
-class NetworkProvider: Provider {
-    let realmManager: Realm? = try? Realm()
-    
+class NetworkService: Service {
     func getUsers(completion: @escaping ((Result<[User], Error>) -> Void)) {
         let parameters: Parameters = [
             "results": 10

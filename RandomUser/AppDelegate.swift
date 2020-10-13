@@ -19,7 +19,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             return true
         } else {
             let window = UIWindow(frame: UIScreen.main.bounds)
-            let provider = NetworkProvider()
+            let service = NetworkService()
+            let provider = DataProvider(service: service)
 
             applicationCoordinator = ApplicationCoordinator(window: window,
                                                             coordinatorFactory: CoordinatorFactory(),

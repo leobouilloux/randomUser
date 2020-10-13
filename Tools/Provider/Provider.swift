@@ -7,10 +7,9 @@
 //
 
 import Foundation
-import RealmSwift
 
 protocol Provider {
-    var realmManager: Realm? { get }
-    
-    func getUsers(completion: @escaping ((Result<[User], Error>) -> Void))
+    func getUsers() -> [UserDTO]
+    func fetchUsers(completion: @escaping ((Result<[UserDTO], Error>) -> Void))
+    func refreshDatabase(completion: @escaping ((Result<[UserDTO], Error>) -> Void))
 }

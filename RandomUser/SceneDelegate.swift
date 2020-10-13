@@ -20,7 +20,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(windowScene: windowScene)
 
         guard let window = window else { return }
-        let provider = NetworkProvider()
+        print(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0])
+        let service = NetworkService()
+        let provider = DataProvider(service: service)
         applicationCoordinator = ApplicationCoordinator(window: window,
                                                         coordinatorFactory: CoordinatorFactory(),
                                                         provider: provider)

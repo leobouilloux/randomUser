@@ -47,18 +47,20 @@ final class UserDetailsViewModel: UserDetailsViewModelInterface {
         self.birthDate = BehaviorRelay<String>(value: user.birthDate)
         self.age = BehaviorRelay<String>(value: user.age)
 
-        self.locationTitle = BehaviorRelay<String>(value: "Location")
-        self.geoCoordinates = BehaviorRelay<CLLocation?>(value: user.location.geoCoordinates)
-        self.street = BehaviorRelay<String>(value: user.location.street)
-        self.country = BehaviorRelay<String>(value: user.location.country)
-        self.state = BehaviorRelay<String>(value: user.location.state)
+        self.locationTitle = BehaviorRelay<String>(value: Loc.UserDetails.locationTitle)
+        self.geoCoordinates = BehaviorRelay<CLLocation?>(value: user.location?.geoCoordinates ?? CLLocation(latitude: 0, longitude: 0))
+        self.street = BehaviorRelay<String>(value: user.location?.street ?? "")
+        self.country = BehaviorRelay<String>(value: user.location?.country ?? "")
+        self.state = BehaviorRelay<String>(value: user.location?.state ?? "")
 
-        self.credentialsTitle = BehaviorRelay<String>(value: "Credentials")
-        self.uuid = BehaviorRelay<String>(value: user.loginInfos.uuid)
-        self.username = BehaviorRelay<String>(value: user.loginInfos.username)
-        self.password = BehaviorRelay<String>(value: user.loginInfos.password)
+        self.credentialsTitle = BehaviorRelay<String>(value: Loc.UserDetails.credentialsTitle)
+        self.uuid = BehaviorRelay<String>(value: user.loginInfos?.uuid ?? "")
+        self.username = BehaviorRelay<String>(value: user.loginInfos?.username ?? "")
+        self.password = BehaviorRelay<String>(value: user.loginInfos?.password ?? "")
         
-        self.loadImage(from: user.largeImageURL)
+        if let url = user.largeImageURL {
+            self.loadImage(from: url)
+        }
     }
     
     func loadImage(from url: URLRequest) {

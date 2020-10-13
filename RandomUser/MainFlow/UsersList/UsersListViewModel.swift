@@ -10,19 +10,50 @@ import RxCocoa
 final class UsersListViewModel: UsersListViewModelInterface {
     private let provider: Provider
     let dataSource = BehaviorRelay<[UsersListCellType]>(value: [])
+    let errorMessage = PublishRelay<String>()
+
+    var isLoading: Bool = false
     
     let output = UsersListOutput()
     
     init(provider: Provider) {
         self.provider = provider
         
-        provider.getUsers { [weak self] result in
+        let users = provider.getUsers()
+        if  users.isEmpty {
+            self.fetchUsers()
+        } else {
+            self.setupCells(with: users)
+        }
+    }
+    
+    func resetUsers() {
+        provider.refreshDatabase { [weak self] result in
+            switch result {
+            case let .success(users): self?.setupCells(with: users)
+            case let .failure(error):
+                switch error {
+                case let error as NetworkError: self?.errorMessage.accept(error.userFriendlyErrorMessage)
+                case let error as ProviderError: self?.errorMessage.accept(error.userFriendlyErrorMessage)
+                default: print(error.localizedDescription)
+                }
+            }
+        }
+    }
+    
+    func fetchUsers() {
+        isLoading = true
+        provider.fetchUsers { [weak self] result in
+            self?.isLoading = false
             switch result {
             case let .success(users):
-                let usersDTO = users.compactMap({ UserDTO(with: $0) })
-                self?.setupCells(with: usersDTO)
+                self?.setupCells(with: users)
             case let .failure(error):
-                print(error.localizedDescription)
+                switch error {
+                case let error as NetworkError: self?.errorMessage.accept(error.userFriendlyErrorMessage)
+                case let error as ProviderError: self?.errorMessage.accept(error.userFriendlyErrorMessage)
+                default: print(error.localizedDescription)
+                }
             }
         }
     }

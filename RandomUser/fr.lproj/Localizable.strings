@@ -10,7 +10,17 @@
 "error.noDataReceived" = "Aucune donnée n'est renvoyée par le serveur distant";
 "error.jsonDecodeFailed" = "Les données reçue ne sont pas correctement formatées";
 "error.errorReceived" = "Erreur réseau";
+"error.cannotWriteToDatabase" = "Impossible d'enregistrer les données reçues";
+"error.cannotWipeDatabase" = "Impossible d'effacer la base de données";
 
 // SplashScreen
 "splashScreen.title" = "RandomUsers";
 "splashScreen.avatarCaption" = "Test technique réalisé par Léo Marcotte";
+
+// UsersList
+"UsersList.refresh" = "Rafraichir";
+
+// UserDetails
+"UserDetails.locationTitle" = "Localisation";
+"UserDetails.credentialsTitle" = "Identifiants";
+"UserDetails.yearsOld" = "%@ ans";

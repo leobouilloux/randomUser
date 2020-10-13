@@ -17,7 +17,9 @@ final class UserTableViewCellViewModel: UserTableViewCellViewModelInterface {
         self.name = BehaviorRelay<String>(value: user.fullname)
         self.userImage = BehaviorRelay<UIImage>(value: Assets.Image.defaultAvatar)
         
-        self.loadImage(from: user.mediumImageURL)
+        if let url = user.mediumImageURL {
+            self.loadImage(from: url)
+        }
     }
     
     func loadImage(from url: URLRequest) {

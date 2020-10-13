@@ -27,7 +27,18 @@ final class UsersListViewController: RxViewController {
 extension UsersListViewController: UITableViewDelegate {
     /* SetupView */
     private func setupView() {
+        setupNavigationBar()
         setupTableView()
+    }
+    
+    private func setupNavigationBar() {
+        let refreshBarButtonItem = UIBarButtonItem(title: Loc.UsersList.refresh, style: .plain, target: self, action: nil)
+        refreshBarButtonItem.rx.tap
+            .subscribe( onNext: { [weak self] in
+                self?.viewModel.resetUsers()
+            })
+            .disposed(by: bag)
+        navigationItem.rightBarButtonItem = refreshBarButtonItem
     }
     
     private func setupTableView() {
@@ -49,6 +60,7 @@ extension UsersListViewController: UITableViewDelegate {
     /* Rx Bindings */
     private func setupRxBindings() {
         bindTableView()
+        bindErrorMessage()
     }
     
     private func bindTableView() {
@@ -72,8 +84,42 @@ extension UsersListViewController: UITableViewDelegate {
                 }
             })
             .disposed(by: bag)
+    }
+    
+//    private func bindIsLoading() {
+//        viewModel.isLoading
+//            .subscribe(onNext: { [weak self] isLoading in
+//                if !isLoading {
+//                    DispatchQueue.main.async {
+//                        self?.refreshControl.endRefreshing()
+//                    }
+//                }
+//            })
+//            .disposed(by: bag)
+//    }
+    
+    func bindErrorMessage() {
+        viewModel.errorMessage
+            .subscribe(onNext: { [weak self] errorMessage in
+                DispatchQueue.main.async {
+                    self?.snackBarController.error(message: errorMessage)
+                }
+            })
+            .disposed(by: bag)
 
     }
+    
+    /* UIScrollViewDelegate */
+    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        if scrollView == tableView {
+            if (scrollView.contentOffset.y + scrollView.frame.size.height) >= scrollView.contentSize.height {
+                if !viewModel.isLoading {
+                    viewModel.fetchUsers()
+                }
+            }
+        }
+    }
+
 
     /* Helpers */
     private func cell(for cellType: UsersListCellType, indexPath: IndexPath) -> UITableViewCell {

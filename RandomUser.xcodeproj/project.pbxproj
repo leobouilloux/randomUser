@@ -53,7 +53,7 @@
 		B3119E32252D3EC400C80B8E /* RxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3119E0C252D3EC400C80B8E /* RxViewController.swift */; };
 		B3119E33252D3EC400C80B8E /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3119E0D252D3EC400C80B8E /* BaseViewController.swift */; };
 		B3119E35252D3EC400C80B8E /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3119E11252D3EC400C80B8E /* Provider.swift */; };
-		B3119E36252D3EC400C80B8E /* NetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3119E12252D3EC400C80B8E /* NetworkProvider.swift */; };
+		B3119E36252D3EC400C80B8E /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3119E12252D3EC400C80B8E /* NetworkService.swift */; };
 		B3119E37252D3EC400C80B8E /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3119E13252D3EC400C80B8E /* NetworkError.swift */; };
 		B3119E78252D42AF00C80B8E /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3119E77252D42AF00C80B8E /* ApplicationCoordinator.swift */; };
 		B3119E88252D446A00C80B8E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B3119E8A252D446A00C80B8E /* Localizable.strings */; };
@@ -74,6 +74,20 @@
 		B3119EDD2534866700C80B8E /* UsersListCellType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3119EDC2534866700C80B8E /* UsersListCellType.swift */; };
 		B3119EE225352A7000C80B8E /* UserDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3119EE125352A7000C80B8E /* UserDTO.swift */; };
 		B3119EE725354AEB00C80B8E /* MKMapView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3119EE625354AEB00C80B8E /* MKMapView+Extension.swift */; };
+		B3119EEC2535600D00C80B8E /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3119EEB2535600D00C80B8E /* DataProvider.swift */; };
+		B3119EF1253560A300C80B8E /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3119EF0253560A300C80B8E /* Service.swift */; };
+		B3119EFC25356AFF00C80B8E /* UserLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3119EFB25356AFF00C80B8E /* UserLocation.swift */; };
+		B3119F0125356C4000C80B8E /* UserLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3119F0025356C4000C80B8E /* UserLogin.swift */; };
+		B3119F0625356C6600C80B8E /* RandomUserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3119F0525356C6600C80B8E /* RandomUserData.swift */; };
+		B3119F0B25356C8800C80B8E /* UserName.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3119F0A25356C8800C80B8E /* UserName.swift */; };
+		B3119F1025356CBA00C80B8E /* UserLocationStreet.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3119F0F25356CBA00C80B8E /* UserLocationStreet.swift */; };
+		B3119F1525356CD500C80B8E /* UserLocationCoordinates.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3119F1425356CD500C80B8E /* UserLocationCoordinates.swift */; };
+		B3119F1A25356CEE00C80B8E /* UserLocationTimeZone.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3119F1925356CEE00C80B8E /* UserLocationTimeZone.swift */; };
+		B3119F1F25356D0800C80B8E /* UserPicture.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3119F1E25356D0800C80B8E /* UserPicture.swift */; };
+		B3119F2425356D1A00C80B8E /* UserId.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3119F2325356D1A00C80B8E /* UserId.swift */; };
+		B3119F2925356D2F00C80B8E /* UserRegistered.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3119F2825356D2F00C80B8E /* UserRegistered.swift */; };
+		B3119F2E25356D4400C80B8E /* UserDOB.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3119F2D25356D4400C80B8E /* UserDOB.swift */; };
+		B3119F5B253586AA00C80B8E /* ProviderError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3119F5A253586A900C80B8E /* ProviderError.swift */; };
 		DD4233F99CB49C72D7E09D97 /* Pods_RandomUser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B19CF673B735DAD6B6C412E9 /* Pods_RandomUser.framework */; };
 /* End PBXBuildFile section */
 
@@ -149,7 +163,7 @@
 		B3119E0C252D3EC400C80B8E /* RxViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxViewController.swift; sourceTree = "<group>"; };
 		B3119E0D252D3EC400C80B8E /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		B3119E11252D3EC400C80B8E /* Provider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Provider.swift; sourceTree = "<group>"; };
-		B3119E12252D3EC400C80B8E /* NetworkProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkProvider.swift; sourceTree = "<group>"; };
+		B3119E12252D3EC400C80B8E /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		B3119E13252D3EC400C80B8E /* NetworkError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		B3119E77252D42AF00C80B8E /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
 		B3119E7E252D43D100C80B8E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -173,6 +187,20 @@
 		B3119EDC2534866700C80B8E /* UsersListCellType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersListCellType.swift; sourceTree = "<group>"; };
 		B3119EE125352A7000C80B8E /* UserDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDTO.swift; sourceTree = "<group>"; };
 		B3119EE625354AEB00C80B8E /* MKMapView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKMapView+Extension.swift"; sourceTree = "<group>"; };
+		B3119EEB2535600D00C80B8E /* DataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
+		B3119EF0253560A300C80B8E /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		B3119EFB25356AFF00C80B8E /* UserLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLocation.swift; sourceTree = "<group>"; };
+		B3119F0025356C4000C80B8E /* UserLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLogin.swift; sourceTree = "<group>"; };
+		B3119F0525356C6600C80B8E /* RandomUserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomUserData.swift; sourceTree = "<group>"; };
+		B3119F0A25356C8800C80B8E /* UserName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserName.swift; sourceTree = "<group>"; };
+		B3119F0F25356CBA00C80B8E /* UserLocationStreet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLocationStreet.swift; sourceTree = "<group>"; };
+		B3119F1425356CD500C80B8E /* UserLocationCoordinates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLocationCoordinates.swift; sourceTree = "<group>"; };
+		B3119F1925356CEE00C80B8E /* UserLocationTimeZone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLocationTimeZone.swift; sourceTree = "<group>"; };
+		B3119F1E25356D0800C80B8E /* UserPicture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPicture.swift; sourceTree = "<group>"; };
+		B3119F2325356D1A00C80B8E /* UserId.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserId.swift; sourceTree = "<group>"; };
+		B3119F2825356D2F00C80B8E /* UserRegistered.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRegistered.swift; sourceTree = "<group>"; };
+		B3119F2D25356D4400C80B8E /* UserDOB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDOB.swift; sourceTree = "<group>"; };
+		B3119F5A253586A900C80B8E /* ProviderError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderError.swift; sourceTree = "<group>"; };
 		B4A9F260EBF97F25EA14979D /* Pods-RandomUserTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RandomUserTests.debug.xcconfig"; path = "Target Support Files/Pods-RandomUserTests/Pods-RandomUserTests.debug.xcconfig"; sourceTree = "<group>"; };
 		DD6104E4624A7475B3F30459 /* Pods_RandomUserTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RandomUserTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -368,6 +396,17 @@
 			children = (
 				B3119EB5252D490100C80B8E /* User.swift */,
 				B3119EE125352A7000C80B8E /* UserDTO.swift */,
+				B3119EFB25356AFF00C80B8E /* UserLocation.swift */,
+				B3119F0025356C4000C80B8E /* UserLogin.swift */,
+				B3119F0525356C6600C80B8E /* RandomUserData.swift */,
+				B3119F0A25356C8800C80B8E /* UserName.swift */,
+				B3119F0F25356CBA00C80B8E /* UserLocationStreet.swift */,
+				B3119F1425356CD500C80B8E /* UserLocationCoordinates.swift */,
+				B3119F1925356CEE00C80B8E /* UserLocationTimeZone.swift */,
+				B3119F1E25356D0800C80B8E /* UserPicture.swift */,
+				B3119F2325356D1A00C80B8E /* UserId.swift */,
+				B3119F2825356D2F00C80B8E /* UserRegistered.swift */,
+				B3119F2D25356D4400C80B8E /* UserDOB.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -439,9 +478,12 @@
 		B3119E10252D3EC400C80B8E /* Provider */ = {
 			isa = PBXGroup;
 			children = (
-				B3119E11252D3EC400C80B8E /* Provider.swift */,
-				B3119E12252D3EC400C80B8E /* NetworkProvider.swift */,
+				B3119EEB2535600D00C80B8E /* DataProvider.swift */,
 				B3119E13252D3EC400C80B8E /* NetworkError.swift */,
+				B3119E12252D3EC400C80B8E /* NetworkService.swift */,
+				B3119E11252D3EC400C80B8E /* Provider.swift */,
+				B3119F5A253586A900C80B8E /* ProviderError.swift */,
+				B3119EF0253560A300C80B8E /* Service.swift */,
 			);
 			path = Provider;
 			sourceTree = "<group>";
@@ -703,10 +745,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3119EEC2535600D00C80B8E /* DataProvider.swift in Sources */,
 				B3119EB6252D490100C80B8E /* User.swift in Sources */,
 				B3119E37252D3EC400C80B8E /* NetworkError.swift in Sources */,
 				B3119E9D252D46AE00C80B8E /* UsersListViewModel.swift in Sources */,
 				B308932C252D3B3C0065AC55 /* ViewController.swift in Sources */,
+				B3119EFC25356AFF00C80B8E /* UserLocation.swift in Sources */,
 				B3119DD4252D3E6E00C80B8E /* SplashScreenViewModel.swift in Sources */,
 				B3119E15252D3EC400C80B8E /* Loc.swift in Sources */,
 				B3119EA2252D46EF00C80B8E /* UsersListViewController.swift in Sources */,
@@ -716,10 +760,12 @@
 				B3119DD6252D3E6E00C80B8E /* SplashScreenViewController.swift in Sources */,
 				B3119DDD252D3E6E00C80B8E /* SplashScreenFactory.swift in Sources */,
 				B3119ED3252DB7B800C80B8E /* UserTableViewCellViewModel.swift in Sources */,
+				B3119F5B253586AA00C80B8E /* ProviderError.swift in Sources */,
 				B3119EE725354AEB00C80B8E /* MKMapView+Extension.swift in Sources */,
 				B3119DDA252D3E6E00C80B8E /* SplashScreenCoordinatorOutput.swift in Sources */,
 				B3119DDF252D3E6E00C80B8E /* SplashScreenOutput.swift in Sources */,
 				B3119E23252D3EC400C80B8E /* Array+Extension.swift in Sources */,
+				B3119F2425356D1A00C80B8E /* UserId.swift in Sources */,
 				B3119DDC252D3E6E00C80B8E /* SplashScreenViewModel.swift in Sources */,
 				B3119DD7252D3E6E00C80B8E /* SplashScreenOutput.swift in Sources */,
 				B3119EE225352A7000C80B8E /* UserDTO.swift in Sources */,
@@ -736,22 +782,32 @@
 				B3119E22252D3EC400C80B8E /* UITableView+Extension.swift in Sources */,
 				B3119E1C252D3EC400C80B8E /* CoordinatorFactory.swift in Sources */,
 				B3119E32252D3EC400C80B8E /* RxViewController.swift in Sources */,
+				B3119F0625356C6600C80B8E /* RandomUserData.swift in Sources */,
 				B3119E30252D3EC400C80B8E /* TextField.swift in Sources */,
+				B3119F2E25356D4400C80B8E /* UserDOB.swift in Sources */,
 				B3119E21252D3EC400C80B8E /* UITableViewCell+Extension.swift in Sources */,
+				B3119F1A25356CEE00C80B8E /* UserLocationTimeZone.swift in Sources */,
 				B3119E18252D3EC400C80B8E /* Presentable.swift in Sources */,
 				B3119E1B252D3EC400C80B8E /* BaseCoordinator.swift in Sources */,
 				B3119DDE252D3E6E00C80B8E /* SplashScreenViewModelInterface.swift in Sources */,
 				B3119E2E252D3EC400C80B8E /* SnackBar.swift in Sources */,
 				B3119EA7252D477E00C80B8E /* UserDetailsViewController.swift in Sources */,
 				B3119EC5252D4AC200C80B8E /* UsersListOutput.swift in Sources */,
+				B3119F1F25356D0800C80B8E /* UserPicture.swift in Sources */,
+				B3119F2925356D2F00C80B8E /* UserRegistered.swift in Sources */,
 				B3089328252D3B3C0065AC55 /* AppDelegate.swift in Sources */,
 				B3119E98252D468700C80B8E /* UsersListViewModelInterface.swift in Sources */,
+				B3119F1025356CBA00C80B8E /* UserLocationStreet.swift in Sources */,
 				B308932A252D3B3C0065AC55 /* SceneDelegate.swift in Sources */,
+				B3119F1525356CD500C80B8E /* UserLocationCoordinates.swift in Sources */,
+				B3119F0125356C4000C80B8E /* UserLogin.swift in Sources */,
+				B3119F0B25356C8800C80B8E /* UserName.swift in Sources */,
 				B3119E35252D3EC400C80B8E /* Provider.swift in Sources */,
 				B3119E2F252D3EC400C80B8E /* SnackBarType.swift in Sources */,
-				B3119E36252D3EC400C80B8E /* NetworkProvider.swift in Sources */,
+				B3119E36252D3EC400C80B8E /* NetworkService.swift in Sources */,
 				B3119DD8252D3E6E00C80B8E /* SplashScreenCoordinator.swift in Sources */,
 				B3119ECB252DB7B000C80B8E /* UserTableViewCell.swift in Sources */,
+				B3119EF1253560A300C80B8E /* Service.swift in Sources */,
 				B3119EC0252D4A4100C80B8E /* MainFactory.swift in Sources */,
 				B3119E1D252D3EC400C80B8E /* Coordinator.swift in Sources */,
 				B3119E2B252D3EC400C80B8E /* NavigationController.swift in Sources */,
