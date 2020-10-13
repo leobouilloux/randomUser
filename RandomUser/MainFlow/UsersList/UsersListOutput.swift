@@ -8,5 +8,5 @@
 import RxCocoa
 
 final class UsersListOutput {
-    let userSelected = PublishRelay<User>()
+    let userSelected = PublishRelay<UserDTO>()
 }

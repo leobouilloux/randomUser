@@ -37,7 +37,7 @@ private extension MainCoordinator {
         router.navigate(to: presentable, with: presentationType)
     }
 
-    func showUserDetails(user: User, presentationType: PresentationType) {
+    func showUserDetails(user: UserDTO, presentationType: PresentationType) {
         let viewModel = UserDetailsViewModel(provider: provider, user: user)
 
         let presentable = factory.makeUserDetailsPresentable(with: viewModel)

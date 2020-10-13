@@ -26,7 +26,6 @@ struct User: Decodable {
     var cell: String
     var email: String
     
-    
     var name: UserName
     var location: UserLocation
     var login: UserLogin
@@ -85,7 +84,7 @@ struct User: Decodable {
         }
         
         struct UserLocationCoordinates: Decodable {
-            var lattitude: String?
+            var latitude: String?
             var longitude: String?
         }
         

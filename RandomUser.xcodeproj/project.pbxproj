@@ -72,6 +72,8 @@
 		B3119ED3252DB7B800C80B8E /* UserTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3119ED2252DB7B800C80B8E /* UserTableViewCellViewModel.swift */; };
 		B3119ED8252DB7C500C80B8E /* UserTableViewCellViewModelInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3119ED7252DB7C500C80B8E /* UserTableViewCellViewModelInterface.swift */; };
 		B3119EDD2534866700C80B8E /* UsersListCellType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3119EDC2534866700C80B8E /* UsersListCellType.swift */; };
+		B3119EE225352A7000C80B8E /* UserDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3119EE125352A7000C80B8E /* UserDTO.swift */; };
+		B3119EE725354AEB00C80B8E /* MKMapView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3119EE625354AEB00C80B8E /* MKMapView+Extension.swift */; };
 		DD4233F99CB49C72D7E09D97 /* Pods_RandomUser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B19CF673B735DAD6B6C412E9 /* Pods_RandomUser.framework */; };
 /* End PBXBuildFile section */
 
@@ -169,6 +171,8 @@
 		B3119ED2252DB7B800C80B8E /* UserTableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCellViewModel.swift; sourceTree = "<group>"; };
 		B3119ED7252DB7C500C80B8E /* UserTableViewCellViewModelInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCellViewModelInterface.swift; sourceTree = "<group>"; };
 		B3119EDC2534866700C80B8E /* UsersListCellType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersListCellType.swift; sourceTree = "<group>"; };
+		B3119EE125352A7000C80B8E /* UserDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDTO.swift; sourceTree = "<group>"; };
+		B3119EE625354AEB00C80B8E /* MKMapView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKMapView+Extension.swift"; sourceTree = "<group>"; };
 		B4A9F260EBF97F25EA14979D /* Pods-RandomUserTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RandomUserTests.debug.xcconfig"; path = "Target Support Files/Pods-RandomUserTests/Pods-RandomUserTests.debug.xcconfig"; sourceTree = "<group>"; };
 		DD6104E4624A7475B3F30459 /* Pods_RandomUserTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RandomUserTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -354,6 +358,7 @@
 				B3119DF3252D3EC400C80B8E /* UITableViewCell+Extension.swift */,
 				B3119DF4252D3EC400C80B8E /* UITableView+Extension.swift */,
 				B3119DF5252D3EC400C80B8E /* Array+Extension.swift */,
+				B3119EE625354AEB00C80B8E /* MKMapView+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -362,6 +367,7 @@
 			isa = PBXGroup;
 			children = (
 				B3119EB5252D490100C80B8E /* User.swift */,
+				B3119EE125352A7000C80B8E /* UserDTO.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -710,11 +716,13 @@
 				B3119DD6252D3E6E00C80B8E /* SplashScreenViewController.swift in Sources */,
 				B3119DDD252D3E6E00C80B8E /* SplashScreenFactory.swift in Sources */,
 				B3119ED3252DB7B800C80B8E /* UserTableViewCellViewModel.swift in Sources */,
+				B3119EE725354AEB00C80B8E /* MKMapView+Extension.swift in Sources */,
 				B3119DDA252D3E6E00C80B8E /* SplashScreenCoordinatorOutput.swift in Sources */,
 				B3119DDF252D3E6E00C80B8E /* SplashScreenOutput.swift in Sources */,
 				B3119E23252D3EC400C80B8E /* Array+Extension.swift in Sources */,
 				B3119DDC252D3E6E00C80B8E /* SplashScreenViewModel.swift in Sources */,
 				B3119DD7252D3E6E00C80B8E /* SplashScreenOutput.swift in Sources */,
+				B3119EE225352A7000C80B8E /* UserDTO.swift in Sources */,
 				B3119E33252D3EC400C80B8E /* BaseViewController.swift in Sources */,
 				B3119E19252D3EC400C80B8E /* Router.swift in Sources */,
 				B3119E1F252D3EC400C80B8E /* NSObject+Extension.swift in Sources */,

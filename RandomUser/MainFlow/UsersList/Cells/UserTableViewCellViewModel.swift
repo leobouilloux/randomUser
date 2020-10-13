@@ -13,11 +13,11 @@ final class UserTableViewCellViewModel: UserTableViewCellViewModelInterface {
     let userImage: BehaviorRelay<UIImage>
     private let bag = DisposeBag()
     
-    init(user: User) {
-        self.name = BehaviorRelay<String>(value: "\(user.name.first) \(user.name.last)")
+    init(user: UserDTO) {
+        self.name = BehaviorRelay<String>(value: user.fullname)
         self.userImage = BehaviorRelay<UIImage>(value: Assets.Image.defaultAvatar)
         
-        self.loadImage(from: URLRequest(url: user.picture.medium))
+        self.loadImage(from: user.mediumImageURL)
     }
     
     func loadImage(from url: URLRequest) {

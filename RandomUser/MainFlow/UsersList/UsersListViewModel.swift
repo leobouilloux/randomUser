@@ -19,7 +19,8 @@ final class UsersListViewModel: UsersListViewModelInterface {
         provider.getUsers { [weak self] result in
             switch result {
             case let .success(users):
-                self?.setupCells(with: users)
+                let usersDTO = users.compactMap({ UserDTO(with: $0) })
+                self?.setupCells(with: usersDTO)
             case let .failure(error):
                 print(error.localizedDescription)
             }
@@ -28,7 +29,7 @@ final class UsersListViewModel: UsersListViewModelInterface {
 }
 
 private extension UsersListViewModel {
-    func setupCells(with users: [User]) {
+    func setupCells(with users: [UserDTO]) {
         let cells: [UsersListCellType] = users.compactMap({ UsersListCellType.user(value: $0) })
         self.dataSource.accept(cells)
     }

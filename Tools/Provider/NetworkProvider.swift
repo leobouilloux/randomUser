@@ -16,12 +16,6 @@ private enum Endpoint {
     }
 
     case randomUsers(results: Int = 10)
-    
-//    var urlString: String {
-//        switch self {
-//        case let .randomUsers(results): return Endpoint.baseURL.appendingPathComponent("?results=\(results)").absoluteString
-//        }
-//    }
 }
 
 class NetworkProvider: Provider {

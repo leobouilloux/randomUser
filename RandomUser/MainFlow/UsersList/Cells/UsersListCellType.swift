@@ -6,7 +6,7 @@
 //
 
 enum UsersListCellType {
-    case user(value: User)
+    case user(value: UserDTO)
 
     var identifier: String {
         switch self {
