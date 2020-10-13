@@ -102,7 +102,6 @@ class UserDTO {
             outputFormatter.dateFormat = "dd/MM/yyyy"
             let outputDate =  outputFormatter.string(from: inputDate)
             
-            
             self.birthDate = "👶 \(outputDate)"
             self.age = "🎂 \(Loc.UserDetails.yearsOld(p1: "\(userDOB.age)"))"
         } else {
